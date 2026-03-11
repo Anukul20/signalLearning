@@ -2,14 +2,16 @@
  <h2>Lunch planner</h2>
 </div>
 <div>
-  <input type="text" [(ngModel)]="newItem" placeholder="Enter lunch item">
+  <input type="text" [(ngModel)]="newItem.name" placeholder="Enter lunch item">
+  <input type="text" [(ngModel)]="newItem.calories" placeholder="Calorie of item">
   <button (click)="addItemToList()">Add Item</button>
 </div>
 <div class="alignCenter">
   <h4>Total number of Lunch Items:{{lunchItems().length}}</h4>
+  <h3>Total Calories:{{totalCalories()}}</h3>
 </div>
 <ul>
-@for(lunch of lunchItems();track $index){
+@for(lunch of formattedItems();track $index){
 <li>{{lunch}}</li>
 <button (click)="deleteLunchItem($index)">Delete item</button>
 }
