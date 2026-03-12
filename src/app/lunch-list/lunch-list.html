@@ -1,0 +1,6 @@
+<ul>
+@for(lunch of formattedItems();track $index){
+<li>{{lunch}}</li>
+<button (click)="deleteLunchItem($index)">Delete item</button>
+}
+</ul>
