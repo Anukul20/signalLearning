@@ -3,8 +3,8 @@
 </div>
 <form (ngSubmit)="addItemToList()">
 <div>
-  <input type="text" [(ngModel)]="newItem.name" placeholder="Enter lunch item" name="newItemName">
-  <input type="text" [(ngModel)]="newItem.calories" placeholder="Calorie of item" name="newItemCalorie">
+  <input #itemname type="text" [(ngModel)]="newItem.name" placeholder="Enter lunch item" name="newItemName">
+  <input  type="text" [(ngModel)]="newItem.calories" placeholder="Calorie of item" name="newItemCalorie">
   <button type="submit">Add Lunch</button>
  
 </div>
